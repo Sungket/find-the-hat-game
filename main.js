@@ -51,6 +51,10 @@ function generateField(height, width) {
             }
         }
     })
+    // set the hat
+    randomCoordinate = Math.floor((Math.random() * height));
+    newField[randomCoordinate][randomCoordinate] = hat;
+
     //this makes the grid look more better, and aligns it to 10 elements wide.
     newField = newField.join('\n');
 
@@ -128,4 +132,6 @@ function runGame() {
     }
 }
 
-runGame();
+//runGame();
+generateField(10, 10);
+console.log(newField);
